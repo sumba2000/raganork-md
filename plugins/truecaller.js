@@ -9,7 +9,7 @@ const s = require('../config');
 const wk = s.MODE == 'public' ? false : true
 Module({pattern: 'true ?(.*)', desc: 'Searches for number in truecaller!',use: 'search',fromMe: wk}, async (msg, query) => {
 let user =  query[1];
-if (!user) return await msg.sendReply('_Need number, .true 91xxxxxxxxxx_');
+if (!user) return await msg.sendReply('_Need number, .true 254xxxxxxxxxx_');
 if (user.includes(" ")) return await msg.sendReply("_No space allowed in between numbers!_")
 if (!user) return await msg.reply("_Need number/reply/mention_");
 const trueCaller = async (num) => {try { var res = await find(num,'',msg.client.user.id) } catch { var res = false }; return res;}
